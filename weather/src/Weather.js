@@ -22,13 +22,15 @@ const Weather = ({ weather, location, fetchWeatherAndLocation, tempScale }) => {
   };
 
   const renderWeather = () => {
+    
     if (Object.keys(weather).length !== 0 && Object.keys(location).length !== 0) {
+      console.log({location});
       return (
         <div className="mb-5">
           <div className="row justify-content-center align-items-center">
-            <div className="col-md-2 order-md-1 container">
+            <div className="col-md-2 order-md-1 h7 container leftdata">
               <CurrentWeather temperature={temperature} />
-            
+          
             </div>
             <div className="col-md-7 order-md-1 container">
               <Newsfeed/>
@@ -43,10 +45,10 @@ const Weather = ({ weather, location, fetchWeatherAndLocation, tempScale }) => {
               <DailyWeather temperature={temperature} />
             </div>
             {/* Middle on */}
-            <div className="col-md-12 order-md-4 bg-dark pt-5 pb-5">
+            <div className="col-md-12 order-md-4 bgdark pt-5 pb-5">
               <WeatherDescription temperature={temperature} />
             </div>
-            <div className="col-12 my-5 text-center order-md-2">
+            <div className="col-12 my-5 text-center h4  order-md-2">
               Today: {weather.current.weather[0].description}. The high will be{' '}
               {temperature(weather.daily[0].temp.max)}. The low tonight will be{' '}
               {temperature(weather.daily[0].temp.night)}.
