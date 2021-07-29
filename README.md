@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+# View it here(without news feed)
+https://himanshu12prof.github.io/Weather_News/
+To view as fully functionable wep page, run it offline on youe own system
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
